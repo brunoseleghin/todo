@@ -1,11 +1,16 @@
-import styles from './App.module.css'
 import './global.css';
+import styles from './App.module.css'
+
+import { Header } from './components/Header';
+import { InputTask } from './components/InputTask';
+
 
 export default function App() {
 
   return (
     <div>
-      <h1>Hello World</h1>
+      <Header />
+      <InputTask />
     </div>
   )
 }
