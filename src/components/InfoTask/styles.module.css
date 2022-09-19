@@ -1,0 +1,38 @@
+.wrapperInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
+}
+
+.wrapperTasks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.createdTasks {
+  color: var(--blue);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.06rem;
+}
+
+.completedTasks {
+  color: var(--purple);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.06rem;
+}
+
+.countTask {
+  background-color: var(--gray-400);
+  text-align: center;
+  border-radius: 30px;
+  padding: 1px 10px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.3rem;
+}
