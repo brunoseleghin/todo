@@ -1,7 +1,7 @@
 import { PlusCircle } from 'phosphor-react';
 import styles from './styles.module.css'
 
-export function InputTask() {
+export function TaskInput() {
   return (
     <div className={styles.wrapper}>
       <input

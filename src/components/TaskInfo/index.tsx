@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
 
-export function InfoTask() {
+export function TaskInfo() {
   return (
     <div className={styles.wrapperInfo}>
       <div className={styles.wrapperTasks}>

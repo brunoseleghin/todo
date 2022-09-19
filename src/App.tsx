@@ -2,8 +2,8 @@ import './global.css';
 import styles from './App.module.css'
 
 import { Header } from './components/Header';
-import { InputTask } from './components/InputTask';
-import { InfoTask } from './components/InfoTask';
+import { TaskInput } from './components/TaskInput';
+import { TaskInfo } from './components/TaskInfo';
 
 import { Check, Trash } from 'phosphor-react';
 
@@ -14,9 +14,9 @@ export default function App() {
     <div>
       <Header />
       <main className={styles.wrapper}>
-        <InputTask />
+        <TaskInput />
 
-        <InfoTask />
+        <TaskInfo />
 
         {false ?
           <div className={styles.wrapperListEmpty}>
