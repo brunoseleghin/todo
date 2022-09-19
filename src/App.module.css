@@ -1,0 +1,81 @@
+.wrapper {
+  max-width: 46rem;
+  margin: auto;
+  margin-top: -1.68rem;
+  padding: 0 1rem;
+}
+
+.wrapperList {
+  margin-top: 1.5rem;
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+  background-color: var(--gray-500);
+  display: flex;
+}
+
+.taskMarker {
+  margin: 1rem 0rem 2rem 1rem;
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 0.625rem;
+  background-color: var(--gray-500);
+  border: 2px solid var(--blue);
+  cursor: pointer;
+}
+
+.taskMarkerDone {
+  margin: 1rem 0rem 2rem 1rem;
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 0.625rem;
+  background-color: var(--purple-dark);
+  color: var(--gray-100);
+  border: 0;
+  cursor: pointer;
+}
+
+.taskText {
+  margin: 0.75rem 0rem 1rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--gray-200);
+}
+
+.taskTextDone {
+  margin: 0.75rem 0rem 1rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
+.taskTrash {
+  margin: 0.875rem 1rem 2rem 0.75rem;
+  color: var(--gray-300);
+  cursor: pointer;
+}
+
+.taskTrash:hover {
+  color: var(--danger);
+}
+
+.wrapperListEmpty {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+}
+
+.wrapperImg {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapperText {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--gray-300);
+}
