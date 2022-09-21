@@ -4,52 +4,53 @@ import styles from './App.module.css'
 import { Header } from './components/Header';
 import { TaskInput } from './components/TaskInput';
 import { TaskInfo } from './components/TaskInfo';
+import { TaskList } from './components/TaskList';
+import { useState } from 'react';
 
-import { Check, Trash } from 'phosphor-react';
-
-import Clipboard from './assets/Clipboard.svg'
+export interface TaskProps {
+  id: number;
+  title: string;
+  done: boolean;
+}
 
 export default function App() {
+  const [tasks, setTasks] = useState<TaskProps[]>([]);
+
+  function handleAddTask(newTask: string) {
+    const dataTask = {
+      id: new Date().getTime(),
+      title: newTask,
+      done: false
+    }
+
+    if (tasks.length > 0) {
+      setTasks([...tasks, dataTask]);
+    } else {
+      setTasks([dataTask]);
+    }
+  }
+
+  function handleTaskDone(idTask: number) {
+    const updatedTasks = tasks.map(task => ({ ...task }));
+
+    updatedTasks.find(task => {
+      if (task.id === idTask) {
+        task.done = !task.done;
+      }
+    });
+
+    setTasks([...updatedTasks]);
+  }
+
   return (
     <div>
       <Header />
-      <main className={styles.wrapper}>
-        <TaskInput />
+      <main className={styles.container}>
+        <TaskInput addTask={handleAddTask} />
 
-        <TaskInfo />
+        <TaskInfo tasks={tasks} />
 
-        {false ?
-          <div className={styles.wrapperListEmpty}>
-            <div className={styles.wrapperImg}>
-              <img src={Clipboard} />
-            </div>
-
-            <div className={styles.wrapperText}>
-              <b>Você ainda não tem tarefas cadastradas</b>
-              <p>Crie tarefas e organize seus itens a fazer</p>
-            </div>
-          </div>
-          :
-          <div className={styles.wrapperList}>
-            {true ?
-              <button className={styles.taskMarker}></button>
-              :
-              <button className={styles.taskMarkerDone}><Check size={14} /></button>
-            }
-
-            {true ?
-              <p className={styles.taskText}>
-                Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.
-              </p>
-              :
-              <p className={styles.taskTextDone}>
-                Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.
-              </p>
-            }
-
-            <Trash className={styles.taskTrash} size={25} />
-          </div>
-        }
+        <TaskList tasks={tasks} taskDone={handleTaskDone} />
       </main >
     </div >
   )
