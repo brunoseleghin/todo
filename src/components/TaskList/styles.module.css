@@ -1,0 +1,20 @@
+.wrapperListEmpty {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+}
+
+.wrapperImg {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapperText {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--gray-300);
+}
