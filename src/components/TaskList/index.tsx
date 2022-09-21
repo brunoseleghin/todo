@@ -9,16 +9,17 @@ import { TaskItem } from '../TaskItem';
 interface TaskListProps {
   tasks: TaskProps[];
   taskDone: (taskId: number) => void;
+  taskDelete: (taskId: number) => void;
 }
 
-export function TaskList({ tasks, taskDone }: TaskListProps) {
+export function TaskList({ tasks, taskDone, taskDelete }: TaskListProps) {
   return (
     <>
       {tasks.length > 0 ? (
         <div>
           {tasks.map(task => {
             return (
-              <TaskItem key={task.id} task={task} taskDone={taskDone} />
+              <TaskItem key={task.id} task={task} taskDone={taskDone} taskDelete={taskDelete} />
             )
           })}
         </div>

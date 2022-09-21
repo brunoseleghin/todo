@@ -6,9 +6,10 @@ import styles from './styles.module.css';
 interface TaskItemProps {
   task: TaskProps;
   taskDone: (idTask: number) => void;
+  taskDelete: (idTask: number) => void;
 }
 
-export function TaskItem({ task, taskDone }: TaskItemProps) {
+export function TaskItem({ task, taskDone, taskDelete }: TaskItemProps) {
   return (
     task.done === false ? (
       <div className={styles.wrapperList}>
@@ -16,7 +17,9 @@ export function TaskItem({ task, taskDone }: TaskItemProps) {
         <p className={styles.taskText}>
           {task.title}
         </p>
-        <Trash className={styles.taskTrash} size={25} />
+        <button className={styles.taskDelete} onClick={() => taskDelete(task.id)}>
+          <Trash size={25} />
+        </button>
       </div>
     ) : (
       <div className={styles.wrapperList}>
@@ -26,7 +29,9 @@ export function TaskItem({ task, taskDone }: TaskItemProps) {
         <p className={styles.taskTextDone}>
           {task.title}
         </p>
-        <Trash className={styles.taskTrash} size={25} />
+        <button className={styles.taskDelete} onClick={() => taskDelete(task.id)}>
+          <Trash size={25} />
+        </button>
       </div>
     )
   );

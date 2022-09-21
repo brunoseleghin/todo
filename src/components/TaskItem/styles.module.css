@@ -48,11 +48,15 @@
   margin-right: 12px;
 }
 
-.taskTrash {
+.taskDelete {
+  background: transparent;
+  border: 0;
   color: var(--gray-300);
   cursor: pointer;
+  line-height: 0;
+  border-radius: 2px;
 }
 
-.taskTrash:hover {
+.taskDelete:hover {
   color: var(--danger);
 }

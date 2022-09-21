@@ -42,6 +42,14 @@ export default function App() {
     setTasks([...updatedTasks]);
   }
 
+  function handleTaskDelete(idTask: number) {
+    const updatedTasks = tasks.filter(task => {
+      return task.id !== idTask;
+    });
+
+    setTasks([...updatedTasks]);
+  }
+
   return (
     <div>
       <Header />
@@ -50,7 +58,7 @@ export default function App() {
 
         <TaskInfo tasks={tasks} />
 
-        <TaskList tasks={tasks} taskDone={handleTaskDone} />
+        <TaskList tasks={tasks} taskDone={handleTaskDone} taskDelete={handleTaskDelete} />
       </main >
     </div >
   )
