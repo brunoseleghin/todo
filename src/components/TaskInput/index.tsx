@@ -1,6 +1,5 @@
 import { PlusCircle } from 'phosphor-react';
 import { ChangeEvent, useState } from 'react';
-import { TaskProps } from '../../App';
 import styles from './styles.module.css';
 
 interface TaskInputProps {

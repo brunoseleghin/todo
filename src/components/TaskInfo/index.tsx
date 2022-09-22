@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
 import { TaskProps } from '../../App';
 import styles from './styles.module.css';
 
 interface TaskInfoProps {
   tasks: TaskProps[];
+  numberOfTasksDone: TaskProps[];
 }
 
-export function TaskInfo({ tasks }: TaskInfoProps) {
+export function TaskInfo({ tasks, numberOfTasksDone }: TaskInfoProps) {
   return (
     <div className={styles.wrapperInfo}>
       <div className={styles.wrapperTasks}>
@@ -16,7 +16,7 @@ export function TaskInfo({ tasks }: TaskInfoProps) {
 
       <div className={styles.wrapperTasks}>
         <p className={styles.completedTasks}>Concluídas</p>
-        <p className={styles.countTask}>{0} de {tasks.length}
+        <p className={styles.countTask}>{numberOfTasksDone.length} de {tasks.length}
         </p>
       </div>
     </div>

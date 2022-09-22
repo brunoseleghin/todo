@@ -14,6 +14,7 @@ export interface TaskProps {
 }
 
 export default function App() {
+  const [counterTaskDone, setCounterTaskDone] = useState<TaskProps[]>([]);
   const [tasks, setTasks] = useState<TaskProps[]>([]);
 
   function handleAddTask(newTask: string) {
@@ -39,6 +40,12 @@ export default function App() {
       }
     });
 
+    const counterTaskDone = updatedTasks.filter(task => {
+      return task.done === true;
+    });
+
+    setCounterTaskDone(counterTaskDone);
+
     setTasks([...updatedTasks]);
   }
 
@@ -47,7 +54,17 @@ export default function App() {
       return task.id !== idTask;
     });
 
+    TasksDone(updatedTasks);
+
     setTasks([...updatedTasks]);
+  }
+
+  function TasksDone(tasks: TaskProps[]) {
+    const counterTaskDone = tasks.filter(task => {
+      return task.done === true;
+    });
+
+    setCounterTaskDone(counterTaskDone);
   }
 
   return (
@@ -56,7 +73,7 @@ export default function App() {
       <main className={styles.container}>
         <TaskInput addTask={handleAddTask} />
 
-        <TaskInfo tasks={tasks} />
+        <TaskInfo tasks={tasks} numberOfTasksDone={counterTaskDone} />
 
         <TaskList tasks={tasks} taskDone={handleTaskDone} taskDelete={handleTaskDelete} />
       </main >
