@@ -3,8 +3,8 @@
 </p>
 
 <div align="center">
-  <img width="500" height="350" src="https://user-images.githubusercontent.com/36992725/208320909-0b6afcd5-9c68-45ff-afa5-05cdaf1efde2.png">
-  <img width="500" height="350" src="https://user-images.githubusercontent.com/36992725/208320926-650b70d0-66bb-424d-8e7d-da0a318c26a4.png">
+  <img width="450" height="300" src="https://user-images.githubusercontent.com/36992725/208320909-0b6afcd5-9c68-45ff-afa5-05cdaf1efde2.png">
+  <img width="450" height="300" src="https://user-images.githubusercontent.com/36992725/208320926-650b70d0-66bb-424d-8e7d-da0a318c26a4.png">
 </div>
 
 ## 📓 Sobre 
