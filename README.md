@@ -13,7 +13,7 @@ Aplicativo para gerenciamento de tarefas.
 - Remover uma tarefa da listagem
 - Mostrar o progresso de conclusão das tarefas
 
-## ⚡ Desenvolvido com as Tecnologias
+## ⚡ Desenvolvido com as tecnologias
 
 <div>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" width="40" height="40" alt="HTML" />
@@ -36,7 +36,6 @@ Aplicativo para gerenciamento de tarefas.
 
 <div align="center">
   <img width="800" height="600" src="https://user-images.githubusercontent.com/36992725/208320909-0b6afcd5-9c68-45ff-afa5-05cdaf1efde2.png">
-  
   <img width="800" height="600" src="https://user-images.githubusercontent.com/36992725/208320926-650b70d0-66bb-424d-8e7d-da0a318c26a4.png">
 </div>
 
