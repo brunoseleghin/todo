@@ -16,11 +16,7 @@ Aplicativo para gerenciamento de tarefas.
 ## ⚡ Desenvolvido com as tecnologias
 
 <div>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" width="40" height="40" alt="HTML" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" width="40" height="40" alt="CSS" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" width="40" height="40" alt="Typescript" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40" alt="ReactJS" />
-  <img src="https://vitejs.dev/logo-with-shadow.png" width="40" height="40" alt="ViteJS" />
+  <img src="https://skillicons.dev/icons?i=git,ts,react,vite,html,css,vscode,figma" />
 </div>
 
 ## 🚀 Instalação e execução do projeto
